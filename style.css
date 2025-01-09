@@ -1,0 +1,112 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e4d92, #0a2351);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #1e4d92;
+    margin-bottom: 30px;
+}
+
+.choice {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.choice:hover {
+    background-color: #e0e0e0;
+    transform: translateX(-5px);
+}
+
+.choice.selected {
+    background-color: #3bbee6;
+    color: white;
+    border-color: #3bbee6;
+}
+
+.choice.correct {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #45a049;
+    animation: pulse 0.5s;
+}
+
+.choice.wrong {
+    background-color: #ff9800;
+    color: white;
+    border-color: #f57c00;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #1e4d92;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #173d74;
+}
+
+.hide {
+    display: none !important;
+}
+
+#results {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#score {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #1e4d92;
+} 
